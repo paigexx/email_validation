@@ -41,7 +41,7 @@ class User:
         if not email_regex.match(data["email"]):
             flash("Please enter a valid email")
             is_valid = False
-        if len(data["user_name"]) < 6 or len(data["user_name"]) > 8:
+        if len(data["user_name"]) < 6:
             flash("Username must be betweeen 6-8 characters.")
             is_valid = False
         if data["user_name"][0] == " " or data["email"][0] == " ":
